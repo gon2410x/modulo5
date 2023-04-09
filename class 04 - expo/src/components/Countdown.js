@@ -42,7 +42,7 @@ export const Countdown = ({minutes=1 , isPaused, onEnd}) => {
     
     interval.current = setInterval(countDown, 1000);
 
-    return () => clearInterval(interval.current);
+    return () => clearInterval(interval.current); //limpia el intervalo
   },[isPaused]);
 
   const minute = Math.floor(millis / 1000 / 60) % 60;
